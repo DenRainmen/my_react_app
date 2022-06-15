@@ -1,25 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+//Основная родительская компонента App
+const App = () =>
+  <div>
+
+    <Header />
+    <Technologies />
+
+
+  </div>
+
+// ... компонента Technologies
+const Technologies = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div className="Technologies">
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>REACT</li>
+      </ul>
+    </div>)
 }
 
+// ... компонента Header 
+const Header = () => {
+  return(
+  <div className="Header">
+    <a href='#'>Home</a>
+    <a href='#'>News feed</a>
+    <a href='#'>Messages</a>
+  </div>
+  );
+}
 export default App;
