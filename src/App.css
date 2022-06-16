@@ -1,11 +1,58 @@
-body{
-  font-size: 10px;
+.app-wrapper{
+  
+   display: grid;
+
+   grid-template-areas: 
+   "h h"
+   "n c";
+
+   /* высота строк */
+   grid-template-rows: 10vw 1fr;
+   /* ширина колонок */
+   grid-template-columns: 2fr 10fr;
+   grid-gap: 0.2vw;
 }
 
-ul li{
-  list-style-type: decimal-leading-zero;
+.header{
+  /* height: 10vw; */
+  grid-area: h;
+  border: 1px solid #000;
+  /* background-image: url(https://picsum.photos/id/11/1000/60);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; */
+  background: #13CE66;
 }
 
-.Header, .Technologies{
-  font-size: 2em;
+.header img{
+  width: 5vw;
+  height: 5vw;
+}
+
+
+.nav{
+
+  grid-area: n;
+  border: 1px solid #000;
+  height: 100vh;
+  background: #13CE66;
+}
+
+.nav a{
+  text-decoration: none;
+  color:aliceblue;
+  font-size: 3vw;
+}
+
+
+
+.content{
+  grid-area: c;
+  border: 1px solid #000;
+  
+}
+
+.content .mainImg{
+  height: 30vw;
+  width: 100%;
 }
