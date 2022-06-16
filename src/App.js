@@ -1,37 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from "./Components/Header";
+import LeftSideBar from "./Components/LeftSideBar";
+import Main from "./Components/Main";
+
 
 //Основная родительская компонента App
-const App = () =>
-  <div>
-
-    <Header />
-    <Technologies />
-
-
-  </div>
-
-// ... компонента Technologies
-const Technologies = () => {
-  return (
-    <div className="Technologies">
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JS</li>
-        <li>REACT</li>
-      </ul>
-    </div>)
-}
-
-// ... компонента Header 
-const Header = () => {
+const App = () =>{
   return(
-  <div className="Header">
-    <a href='#'>Home</a>
-    <a href='#'>News feed</a>
-    <a href='#'>Messages</a>
+  <div className='app-wrapper'>
+    <Header/>
+    <LeftSideBar/>
+    <Main/>
   </div>
-  );
-}
+)
+};
+  
+
+
+//делаем компоненту App экспортируемой (открытой для применения в других местах приложения)
 export default App;
